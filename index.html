@@ -553,36 +553,6 @@ canyon or forest, tall waterfalls, panoramas. The mosaic can extend
 horizontally, vertically, or can tile a sphere. You might want to shoot several
 such image sets and choose the best. <o:p></o:p></span></span></p>
 
-<h1 style="color:blue">Begin Solution "Shoot the Pictures"</h1>
-<center>
-<br>
-<!-- <h3 style="color:blue; max-width:70%; color:blue; max-width:70%; border-style: solid; border-width: 5px; border-color:orange; background-color:pink; font-variant: normal;">DESCRIPTION: I used the provided correspondence tool to define and extract correspondences, which are stored in the proj3.py code file as numpy arrays.</h3>
-<br>
-<img src="hallway.jpg" style="max-width:40%">
-<br>
-<h3 style="color:blue; max-width:70%; color:blue; max-width:70%; border-style: solid; border-width: 5px; border-color:orange; background-color:pink; font-variant: normal;">DESCRIPTION: Below is a set of mean delaunay triangles (delaunay of mean points) with corner points omitted to see the average face only, without interference from background, clothing, or hairstyle.</h3>
-<br>
-<img src="rectify1.jpg" style="max-width:40%">
-<br> -->
-<h3 style="color:blue; max-width:70%; color:blue; max-width:70%; border-style: solid; border-width: 5px; border-color:orange; background-color:pink; font-variant: normal;">DESCRIPTION: This is an image used for rectification, with the keyboard being the source of the set of points that will be rectified.</h3>
-<br>
-<img src="rectify2.jpg" style="max-width:40%">
-<br>
-<h3 style="color:blue; max-width:70%; color:blue; max-width:70%; border-style: solid; border-width: 5px; border-color:orange; background-color:pink; font-variant: normal;">DESCRIPTION: This is an image used for rectification, with the keyboard being the source of the set of points that will be rectified.</h3>
-<br>
-<img src="rectify3.jpg" style="max-width:40%">
-<br>
-<h3 style="color:blue; max-width:70%; color:blue; max-width:70%; border-style: solid; border-width: 5px; border-color:orange; background-color:pink; font-variant: normal;">DESCRIPTION: This is the first image (left to right) for a panorama that will be made by stitching images together using a set of corresponding points and a homography.</h3>
-<br>
-<img src="pano1.jpg" style="max-width:40%">
-<br>
-<h3 style="color:blue; max-width:70%; color:blue; max-width:70%; border-style: solid; border-width: 5px; border-color:orange; background-color:pink; font-variant: normal;">DESCRIPTION: This is the second image (left to right) for a panorama that will be made by stitching images together using a set of corresponding points and a homography. </h3>
-<br>
-<img src="pano2.jpg" style="max-width:40%">
-<br>
-</center>
-<h1 style="color:blue; max-width:70%">End Solution "Shoot the Pictures"</h1>
-
 <h3><span style="mso-bookmark:scanner"><span style="font-size:10.0pt;
 font-family:Helvetica">Recover Homographies<o:p></o:p></span></span></h3>
 
@@ -713,13 +683,17 @@ define by hand to be a square, e.g.<span style="mso-spacerun:yes">  </span>[0
 <h1 style="color:blue">Begin Solution "Image Rectification"</h1>
 <center>
 <br>
+<h3 style="color:blue; max-width:70%; color:blue; max-width:70%; border-style: solid; border-width: 5px; border-color:orange; background-color:pink; font-variant: normal;">DESCRIPTION: The input image is a high resolution photograph of my monitor. The transformation of this image is relatively minor as the monitor was close to rectangular. The corresponding points are stored in the proj4.py code file.</h3>
+<br>
+<img src="WebImage3_0.PNG" style="width:70%">
+<br>
 <h3 style="color:blue; max-width:70%; color:blue; max-width:70%; border-style: solid; border-width: 5px; border-color:orange; background-color:pink; font-variant: normal;">DESCRIPTION: The input image is a high resolution photograph of my keyboard from an angle at which the rear corners are closer together, and, after the rectification, the front and rear corners are closer together, but the top and bottom corners of the image are a different length after the transformation has been applied to the entire image. The corresponding points are stored in the proj4.py code file.</h3>
 <br>
-<img src="WebImage3.png" style="width:70%">
+<img src="WebImage3.PNG" style="width:70%">
 <br>
 <h3 style="color:blue; max-width:70%; color:blue; max-width:70%; border-style: solid; border-width: 5px; border-color:orange; background-color:pink; font-variant: normal;">DESCRIPTION: This is a high resolution input image of my keyboard, now from an angle at which no corner shares the same (or similar) pixel value, so applying the transformation to the entire photograph modifies the corners of the image in the same manner. The corresponding points are stored in the proj4.py code file.</h3>
 <br>
-<img src="WebImage4.png" style="width:70%">
+<img src="WebImage4.PNG" style="width:70%">
 <br>
 </center>
 <h1 style="color:blue; max-width:70%">End Solution "Image Rectification"</h1>
@@ -774,20 +748,65 @@ should be enough.
 <br>
 <h3 style="color:blue; max-width:70%; color:blue; max-width:70%; border-style: solid; border-width: 5px; border-color:orange; background-color:pink; font-variant: normal;">DESCRIPTION: This is the best result I was able to achieve. This first technique split the section where the images overlap horizontally into two masks, then, through subtraction, obtained the masks that would result in a 50/50 contribution from each image down the center of the split mask. For each graph, the section "cut into input images" refers to the fact that the overlapping "island" was taken from the resulting image and placed into the source image along the boundary lines of the overlap.</h3>
 <br>
-<img src="WebImage5.png" style="width:70%">
+<img src="WebImage5.PNG" style="width:70%">
 <br>
 <h3 style="color:blue; max-width:70%; color:blue; max-width:70%; border-style: solid; border-width: 5px; border-color:orange; background-color:pink; font-variant: normal;">DESCRIPTION: This technique split the section where the two images overlap into two triangles, using the distance of the horizontal split at each row of the image as a ratio to the height of the "island" where the images overlap. For each graph, the section "cut into input images" refers to the fact that the overlapping "island" was taken from the resulting image and placed into the source image along the boundary lines of the overlap.</h3>
 <br>
-<img src="WebImage6.png" style="width:70%">
+<img src="WebImage6.PNG" style="width:70%">
 <br>
 <h3 style="color:blue; max-width:70%; color:blue; max-width:70%; border-style: solid; border-width: 5px; border-color:orange; background-color:pink; font-variant: normal;">DESCRIPTION: This technique is exactly the same as the previous technique, with the exception of choosing to invert the triangles as an experiment to see if unwanted edge dimming and borders could be reduced. For each graph, the section "cut into input images" refers to the fact that the overlapping "island" was taken from the resulting image and placed into the source image along the boundary lines of the overlap.</h3>
 <br>
-<img src="WebImage7.png" style="width:70%">
+<img src="WebImage7.PNG" style="width:70%">
 <br>
 <h3 style="color:blue; max-width:70%; color:blue; max-width:70%; border-style: solid; border-width: 5px; border-color:orange; background-color:pink; font-variant: normal;">DESCRIPTION: This is a side-by-side comparison of the three raw outputs.</h3>
 <br>
 <img src="WebImage8_1.PNG" style="width:70%">
 <br>
+<h3 style="color:blue; max-width:70%; color:blue; max-width:70%; border-style: solid; border-width: 5px; border-color:orange; background-color:pink; font-variant: normal;">DESCRIPTION: This is the best result I was able to achieve. This first technique split the section where the images overlap horizontally into two masks, then, through subtraction, obtained the masks that would result in a 50/50 contribution from each image down the center of the split mask. For each graph, the section "cut into input images" refers to the fact that the overlapping "island" was taken from the resulting image and placed into the source image along the boundary lines of the overlap.</h3>
+<br>
+<img src="WebImage11.PNG" style="width:70%">
+<br>
+<h3 style="color:blue; max-width:70%; color:blue; max-width:70%; border-style: solid; border-width: 5px; border-color:orange; background-color:pink; font-variant: normal;">DESCRIPTION: Points selected for manual blending for a panorama.</h3>
+<br>
+<img src="WebImage12.PNG" style="width:70%">
+<br>
+<h3 style="color:blue; max-width:70%; color:blue; max-width:70%; border-style: solid; border-width: 5px; border-color:orange; background-color:pink; font-variant: normal;">DESCRIPTION: Manual Blending Result</h3>
+<br>
+<img src="WebImage13.PNG" style="width:70%">
+<br>
+<h3 style="color:blue; max-width:70%; color:blue; max-width:70%; border-style: solid; border-width: 5px; border-color:orange; background-color:pink; font-variant: normal;">DESCRIPTION: Pre-RANSAC Points corresponding to matched features. </h3>
+<br>
+<img src="WebImage14.PNG" style="width:70%">
+<br>
+<h3 style="color:blue; max-width:70%; color:blue; max-width:70%; border-style: solid; border-width: 5px; border-color:orange; background-color:pink; font-variant: normal;">DESCRIPTION: Chosen points for homography after RANSAC</h3>
+<br>
+<img src="WebImage15.PNG" style="width:70%">
+<br>
+<h3 style="color:blue; max-width:70%; color:blue; max-width:70%; border-style: solid; border-width: 5px; border-color:orange; background-color:pink; font-variant: normal;">DESCRIPTION: Automatic Blending Result </h3>
+<br>
+<img src="WebImage16.PNG" style="width:70%">
+<br>
+<h3 style="color:blue; max-width:70%; color:blue; max-width:70%; border-style: solid; border-width: 5px; border-color:orange; background-color:pink; font-variant: normal;">DESCRIPTION: Chosen points for homography pre- RANSAC</h3>
+<br>
+<img src="WebImage17.PNG" style="width:70%">
+<br>
+<h3 style="color:blue; max-width:70%; color:blue; max-width:70%; border-style: solid; border-width: 5px; border-color:orange; background-color:pink; font-variant: normal;">DESCRIPTION: Chosen points for homography after RANSAC</h3>
+<br>
+<img src="WebImage18.PNG" style="width:70%">
+<br>
+<h3 style="color:blue; max-width:70%; color:blue; max-width:70%; border-style: solid; border-width: 5px; border-color:orange; background-color:pink; font-variant: normal;">DESCRIPTION: Automatic Blending Result</h3>
+<br>
+<img src="WebImage19.PNG" style="width:70%">
+<br>
+<h3 style="color:blue; max-width:70%; color:blue; max-width:70%; border-style: solid; border-width: 5px; border-color:orange; background-color:pink; font-variant: normal;">DESCRIPTION: Pre-RANSAC Points corresponding to matched features.</h3>
+<br>
+<img src="WebImage20.PNG" style="width:70%">
+<br>
+<h3 style="color:blue; max-width:70%; color:blue; max-width:70%; border-style: solid; border-width: 5px; border-color:orange; background-color:pink; font-variant: normal;">DESCRIPTION: Chosen points for homography after RANSAC</h3>
+<br>
+<img src="WebImage21.PNG" style="width:70%">
+<br>
+<h3 style="color:blue; max-width:70%; color:blue; max-width:70%; border-style: solid; border-width: 5px; border-color:orange; background-color:pink; font-variant: normal;">DESCRIPTION: Automatic Blending Result</h3>
 </center>
 <h1 style="color:blue; max-width:70%">End Solution "Image Mosaic"</h1>
 
