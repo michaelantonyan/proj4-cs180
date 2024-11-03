@@ -610,6 +610,8 @@ function, or use the one that we provided in project 3. </span></span><span styl
 <h1 style="color:blue">Begin Solution "Recover Homographies"</h1>
 <center>
 <br>
+<h3 style="color:blue; max-width:70%; color:blue; max-width:70%; border-style: solid; border-width: 5px; border-color:orange; background-color:pink; font-variant: normal;">WHAT I LEARNED MOST - PART A AND PART B: In this project, I learned that optimization comes in many forms, and sometimes the most elegant solution is rather simple - for example, it is better to be picky with Harris corners and have fewer to process for feature matching and RANSAC later on than it is to rely heavily on those to choose the optimal points. When it comes to merging images, I found linear blending to be mostly sufficient, with limited improvement using a pyramid method with convolutions with a Gaussian filter - this is probably due to high-precision alignment issues and cannot easily be remedied without reducing the overall quality of the image, from what I have gathered</h3>
+<br>
 <h3 style="color:blue; max-width:70%; color:blue; max-width:70%; border-style: solid; border-width: 5px; border-color:orange; background-color:pink; font-variant: normal;">DESCRIPTION: I used the provided correspondence tool to define and extract correspondences, which are stored in the proj4.py code file as numpy arrays. In addition, this corrspondence tool was used to select points for the image mosaic. This is an example of the correspodence tool in use, since some source images were too large to be screenshot and had to later be scaled down in code.</h3>
 <br>
 <img src="WebImage1.PNG" style="max-width:40%">
